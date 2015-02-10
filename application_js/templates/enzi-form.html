@@ -1,0 +1,22 @@
+﻿<div class="modal fade in" tabindex="-1" role="dialog" style="display:block;">
+    <div class="modal-backdrop fade in backdrop"></div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form name="formDeposit" role="form">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="closeDialog()"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">{{title}}</h4>
+                </div>
+                <div class="modal-body" ng-repeat="field in fields">
+                    <label for="{{field.name}}">{{field.label}}</label>
+                    <input type="{{field.type}}" class="form-control" ng-model="record[field.label]" name="{{field.name}}" ng-show="field.type != 'picklist'" />
+
+                    <select ng-model="record[field.label]" ng-options="value for value in field.picklistValues" ng-show="field.type == 'picklist'"></select>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+﻿<head>
+    <script type="text/javascript" src="vendor_js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor_js/angularJS/angular.min.js"></script>
+    <script type="text/javascript" src="application_js/enzi-form.js"></script>
+    <script type="text/javascript" src="application_js/enzi-table.js"></script>
+    <script type="text/javascript" src="application_js/enzi-form-table.js"></script>
+    <link type="text/css" rel="stylesheet" href="vendor_css/bootstrap/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="application_css/global.css">
+</head>
+<body ng-app="enzi-form-table" ng-controller="enzFrmTblCntrllr">
+    <div class="header">
+        <input type="button" value="Create Contact" ng-click="showContactForm()" class="btn btn-primary"></input>
+    </div>
+    <div class="body">
+        <div enztabledir="" record="records" columns="columns" fields="fields"></div>
+    </div>
+    <div class="footer">
+
+    </div>
+</body>
+
